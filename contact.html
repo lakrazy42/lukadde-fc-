@@ -22,17 +22,41 @@
 </div>
   <h2>Join The Club</h2>
   <p>Do you want to play for Lukadde FC?</p>
-  <p>Write your name:</p>
-  <label> NAME:</label><input type="text" placeholder="Your Name"><br><br>
-  <label>EMAIL :</label><input type="email" placeholder="email@.com"><br><br> 
- <select name="interest" required> 
- <option value="">what are you interested in?</option>
-  <option>Goalkeeper</option>
-  <option>Defender</option>
-  <option>Midfeilder</option>
-  <option>striker</option>
-</select><br><br>
-<textarea name="Message" placeholder="Tell us about your interest" required rows="5" cols="30"></textarea><br><br>
-<button type="submit">SUBMIT</button>
+<form onsubmit="sendToWhatsApp(event)">
+  <label>NAME:</label><br>
+  <input type="text" id="name" required style="width:90%; padding:10px;"><br><br>
+
+  <label>EMAIL:</label><br>
+  <input type="email" id="email" required style="width:90%; padding:10px;"><br><br>
+
+  <label>POSITION:</label><br>
+  <select id="position" style="width:90%; padding:10px;">
+    <option>Goalkeeper</option>
+    <option>Defender</option>
+    <option>Midfielder</option>
+    <option>Striker</option>
+  </select><br><br>
+
+  <label>MESSAGE:</label><br>
+  <textarea id="message" rows="4" style="width:90%; padding:10px;"></textarea><br><br>
+
+  <button type="submit" style="background:blue; color:white; padding:12px 30px; border:none;">SUBMIT</button>
+</form>
+
+<script>
+function sendToWhatsApp(event) {
+  event.preventDefault();
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var position = document.getElementById('position').value;
+  var message = document.getElementById('message').value;
+
+  var phone = "256754444415";
+
+  var text = "New Lukadde FC Player:%0AName: " + name + "%0AEmail: " + email + "%0APosition: " + position + "%0AMessage: " + message;
+
+  window.open("https://wa.me/" + phone + "?text=" + text, "_blank");
+}
+</script>
 </body>
 </html>
