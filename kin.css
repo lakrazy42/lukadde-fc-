@@ -1,23 +1,23 @@
-<style>
+
 body {
   font-family: Arial;
   text-align: center;
   background: #e3f2fd;
   margin: 0;
-  font-size: 20px; }
-
-h2 { font-size: 30px !important; }
-h3 { font-size: 26px !important; }
-p { font-size: 20px !important; line-height: 1.7; }
-
-
-
-h1 {
+  font-size: 20px; 
+  
+  h1 {
   color: #0d47a1;
-   font-size: 38px !important;
+  font-size: 38px !important;
 }
 
-.menu {
+  h2 { font-size: 30px !important; }
+h3 { font-size: 26px !important; }
+p { font-size: 20px !important; line-height: 1.7; }
+.menu a {font-size: 20px !important;}
+a { font-size: 19px !important; }
+
+  .menu {
   background: #0d47a1;
   padding: 15px;
   display: flex;
